@@ -79,6 +79,9 @@ def acessing_debts():
 
                     banco.close()
                 debts_report()
+            def close_screen():
+                debt_logg.close()
+            debt_logg.pushButton_6.clicked.connect(close_screen)    
 
         #APPLYING EXCEPT (ERROR CPF OR PASSW)
         except:
