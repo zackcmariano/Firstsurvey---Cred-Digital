@@ -9,11 +9,11 @@ import mysql.connector
 #CONNECTION TO THE MYSQL DATABASE 
 #FOR VALIDATION AND INSERTING OF APPLICATION DATA.
 banco = mysql.connector.connect(
-        host = "firstsurvey.cp8v1cxyaxns.us-east-2.rds.amazonaws.com",
-        port="3306",
-        user="admin_fs",
-        passwd="#290910Zmm",
-        database="fs_baseA"
+        host = "HOSTNAME",
+        port="PORTNAME",
+        user="USERNAME",
+        passwd="PASSWORD",
+        database="DATABASE"
     )
 
 '''=============== DEVELOPING THE ALGORITHM ==============='''
