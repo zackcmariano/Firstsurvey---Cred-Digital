@@ -39,6 +39,7 @@ def accessing_registration():
             information_screen.close()
         information_screen.pushButton_6.clicked.connect(close_info)
 
+    #APPLYING EXCEPT (ERROR CPF OR PASSW)
     except:
         security_screen.label_8.setText("Por favor, confira os dados do CPF e da senha!")
         security_screen.lineEdit.setText("")
