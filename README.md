@@ -19,7 +19,7 @@
 # Machine Learning (Cálculo Score):
 ### Para o cálculo do SCORE eu usei a biblioteca Sckit-learn como a principal no desenvolvimento do algoritmo Decison tree, filtrando os melhores dados das bases para treinar o algoritmo.
 
-[https://youtu.be/AprmWjlHKO8](url)
+[![FIRSTsurvey](http://img.youtube.com/vi/AprmWjlHKO8/0.jpg)](http://www.youtube.com/watch?v=AprmWjlHKO8 "FIRSTsurvey")
 
 ### Conclusão: Nos últimos anos vimos a crescente dos dados em todo o mundo, muitos dizem que é o “novo petróleo”, mas acredito que eles vão muito além disso, não é uma tarefa fácil protegê-los. Temos que inovar e melhorar a cada dia, mas mesmo com tantos desafios nós somos capazes.
 
