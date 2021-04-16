@@ -260,8 +260,8 @@ QPushButton:hover {
 }</string>
     </property>
     <property name="text">
-     <string>Última
-compra</string>
+     <string>Bens / Renda
+ no CPF</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_4">
@@ -276,7 +276,7 @@ compra</string>
     <property name="font">
      <font>
       <family>Roboto</family>
-      <pointsize>10</pointsize>
+      <pointsize>11</pointsize>
      </font>
     </property>
     <property name="cursor">
@@ -294,7 +294,7 @@ QPushButton:hover {
 }</string>
     </property>
     <property name="text">
-     <string>Consultas feitas
+     <string>Consultas
 no CPF</string>
     </property>
    </widget>
@@ -328,8 +328,8 @@ QPushButton:hover {
 }</string>
     </property>
     <property name="text">
-     <string>Bens no
-CPF</string>
+     <string>SCORE
+do CPF</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_6">

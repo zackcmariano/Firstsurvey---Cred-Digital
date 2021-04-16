@@ -39,7 +39,7 @@ def accessing_registration():
             information_screen.close()
         information_screen.pushButton_6.clicked.connect(close_info)
 
-    #APPLYING EXCEPT (ERROR CPF OR PASSW)
+    # APPLYING EXCEPT (ERROR CPF OR PASSW)
     except:
         security_screen.label_8.setText("Por favor, confira os dados do CPF e da senha!")
         security_screen.lineEdit.setText("")
@@ -82,7 +82,7 @@ def acessing_debts():
                 debts_report()
             def close_screen():
                 debt_logg.close()
-            debt_logg.pushButton_6.clicked.connect(close_screen)    
+            debt_logg.pushButton_6.clicked.connect(close_screen)
 
         #APPLYING EXCEPT (ERROR CPF OR PASSW)
         except:
@@ -100,6 +100,61 @@ def acessing_debts():
     screen_debt.pushButton.clicked.connect(reporting_debts)
 
 
+#PROPERTIES IN THE USER'S NAME AND CPF
+def property():
+    income.show()
+    def reporting_demesne():
+        cpf = income.lineEdit.text()
+        passw = income.lineEdit_2.text()
+        cursor = banco.cursor()
+        cursor.execute("SELECT * FROM baseB WHERE CPF = '{}' and SENHA = '{}'".format(cpf, passw))
+        checking = cursor.fetchone()
+        try:
+            if (cpf in checking and passw in checking):
+                income_logg.show()
+                income.lineEdit.setText("")
+                income.lineEdit_2.setText("")
+                income.close()
+                income_logg.label_7.setText('{}'.format(cpf))
+                cursor.execute("SELECT NOME FROM baseB WHERE CPF = '{}'".format(cpf))
+                connect = cursor.fetchall()
+                income_logg.label_10.setText(str(connect[0][0]))
+                def property_report():
+                    cursor = banco.cursor()
+                    cursor.execute("SELECT baseB.PRINCIPAL_RENDA, baseB.VALOR, bens.MOVEIS, bens.IMÓVEIS, bens.ENDEREÇO, bens.VALOR FROM baseB JOIN bens ON baseB.ID_baseB = bens.ID_PROP WHERE CPF = '{}'".format(cpf))
+                    reading = cursor.fetchall()
+                    income_logg.tableWidget.setRowCount(len(reading))
+                    income_logg.tableWidget.setColumnCount(6)
+
+                    for request in range(0, len(reading)):
+                        for query in range(0, 6):
+                            income_logg.tableWidget.setItem(request, query, QtWidgets.QTableWidgetItem
+                            (str(reading[request][query])))
+
+                    banco.close()
+                property_report()
+            def close_screen():
+                income_logg.close()
+            income_logg.pushButton_6.clicked.connect(close_screen)
+
+        #APPLYING EXCEPT (ERROR CPF OR PASSW)
+        except:
+            income.label_8.setText("Por favor, confira os dados do CPF e da senha!")
+            income.lineEdit.setText("")
+            income.lineEdit_2.setText("")
+
+    #CLOSE SCREEN
+    def close_property():
+        income.label_8.setText("")
+        income.close()
+    income.pushButton_6.clicked.connect(close_property)
+
+    #LOGAR FUNCTION
+    income.pushButton.clicked.connect(reporting_demesne)
+
+
+
+
 #ACCESS TO REGISTRATION
 def securityscreen():
         security_screen.show()
@@ -107,6 +162,13 @@ def securityscreen():
         def close():
             security_screen.close()
         security_screen.pushButton_6.clicked.connect(close)
+
+#THIS PAGE UNDER CONSTRUCTION
+def under_construction():
+    construction.show()
+    def leaving_the_page():
+        construction.close()
+    construction.pushButton_6.clicked.connect(leaving_the_page)
 
 
 #ENDING THE APPLICATION BY CONNECTING THE FUNCTION
@@ -121,14 +183,20 @@ app = QtWidgets.QApplication([])
 firstsurvey_screen = uic.loadUi("screens/firstsurvey_screen.ui")
 security_screen = uic.loadUi("screens/security_screen.ui")
 information_screen = uic.loadUi("screens/information_screen.ui")
+construction = uic.loadUi("screens/error_screen.ui")
 screen_debt = uic.loadUi("screens/screen_debt.ui")
 debt_logg = uic.loadUi("screens/screen_debt_logg.ui")
+income = uic.loadUi("screens/income.ui")
+income_logg = uic.loadUi("screens/income_logg.ui")
 
 
 #ADDING FUNCTIONALITY TO THE SCREEN BUTTONS
 firstsurvey_screen.pushButton.clicked.connect(securityscreen)
 firstsurvey_screen.pushButton_2.clicked.connect(acessing_debts)
+firstsurvey_screen.pushButton_5.clicked.connect(under_construction)
 firstsurvey_screen.pushButton_6.clicked.connect(closing_application)
+firstsurvey_screen.pushButton_3.clicked.connect(property)
+firstsurvey_screen.pushButton_4.clicked.connect(under_construction)
 
 
 #INSERTING IMAGES ON SCREENS
@@ -139,3 +207,6 @@ firstsurvey_screen.label_11.setPixmap(QtGui.QPixmap('img\image_firstsurvey.png')
 #INITIALIZING THE APPLICATION
 firstsurvey_screen.show()
 app.exec()
+
+
+#============================ FIRSTsurvey ===============================#
