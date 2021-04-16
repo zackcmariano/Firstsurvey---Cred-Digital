@@ -5,6 +5,7 @@
 ### Conectado à AWS com permisões ADM para a criação das bases A, B e C, escolhi o MySQL como o sistema de gerenciamento para os bancos de dados.
 ### Após criar o database na RDS da AWS, fiz alterações na VPC configurando o Inbound rules para estabelecer conexão ON-PREMISES ao MySQL Workbench através do end point, porta padrão do MySQL, usuário e senha definidos na AWS.
 
+![33](https://user-images.githubusercontent.com/76967004/115065062-0e8f8f00-9ec4-11eb-9a31-f6086a6a633a.png)
 
 # Criação das telas:
 ### Para a criação das telas usei a IDE-multiplataforma QT Creator / QtDesigner, que receberam conexão no Algoritmo main.py através da biblioteca PyQT5.
