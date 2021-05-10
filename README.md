@@ -17,7 +17,7 @@
 ### Para uma maior segurança dos dados críticos desenvolvi uma base de dados on-premises com relacionamento Foreign Key e Join que faz a mediação na conexão das bases A, B e C que estão em cloud na AWS.
 
 
-# Machine Learning (Cálculo Score) :
+# Machine Learning (Cálculo Score):
 ### Para o cálculo do SCORE eu usei a biblioteca Sckit-learn como a principal no desenvolvimento do algoritmo Decison tree, filtrando os melhores dados das bases para treinar o algoritmo.
 
 
