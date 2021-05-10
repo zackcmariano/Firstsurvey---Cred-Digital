@@ -7,7 +7,7 @@
 
 ![33](https://user-images.githubusercontent.com/76967004/115065062-0e8f8f00-9ec4-11eb-9a31-f6086a6a633a.png)
 
-# Criação das telas:
+# Criação das telas :
 ### Para a criação das telas usei a IDE-multiplataforma QT Creator / QtDesigner, que receberam conexão no Algoritmo main.py através da biblioteca PyQT5.
 
 
