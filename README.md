@@ -24,6 +24,6 @@
 ## :small_red_triangle_down: CLICK PARA ASSISTIR O VÍDEO (ACESSANDO AS TELAS): :small_red_triangle_down :
 [![FIRSTsurvey](http://img.youtube.com/vi/AprmWjlHKO8/0.jpg)](http://www.youtube.com/watch?v=AprmWjlHKO8 "FIRSTsurvey")
 
-### Conclusão: Nos últimos anos vimos a crescente dos dados em todo o mundo, muitos dizem que é o “novo petróleo”, mas acredito que eles vão muito além disso, não é uma tarefa fácil protegê-los. Temos que inovar e melhorar a cada dia, mas mesmo com tantos desafios nós somos capazes.
+### Conclusão: Nos últimos anos vimos a crescente dos dados em todo o mundo, muitos dizem que é o “novo petróleo”, mas acredito que eles vão muito além disso, não é uma tarefa fácil protegê-los. Temos que inovar e melhorar a cada dia, mas mesmo com tantos desafios nós somos capazes!
 
 ![email_entrevista_tec](https://user-images.githubusercontent.com/76967004/115035846-5eaa2980-9ea3-11eb-856b-27e11b992aeb.png)
